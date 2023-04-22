@@ -1,0 +1,4 @@
+venv/
+**/__pycache__/
+Mae/db.sqlite3
+Mae/static_root
