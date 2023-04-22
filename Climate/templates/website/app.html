@@ -1,0 +1,80 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Sustainable Maps{% endblock title %}
+
+
+{% block content %}
+
+  <!-- contact section -->
+  <section class="layout_padding">
+    <div class="container">
+      <h2 class="font-weight-bold" style="color:orange">
+        Get the carbon cost of your travel!
+      </h2>
+    
+        <center>
+      <div class="row mt-5">
+        <div class="col-md-8 mr-auto">
+          <form method="POST", action="{% url 'website:execute' %}">
+            {% csrf_token %}
+
+            <div class="contact_form-container">
+
+                <h4>Starting Location</h4>
+              <div>
+                <div>
+                  <input type="text" placeholder="Street Address" name="Starting Street">
+                </div>
+                <div>
+                  <input type="text" placeholder="City" name="Starting City">
+                </div>
+                <div>
+                  <input type="text" placeholder="State (e.g. NY)" name="Starting State">
+                </div>
+                <div>
+                  <input type="number" placeholder="Zipcode" name="Starting Zipcode">
+                </div>
+              </div>
+
+                <h4 class="mt-4">Destination</h4>
+              <div>
+                <div>
+                  <input type="text" placeholder="Street Address" name = "Destination Street">
+                </div>
+                <div>
+                  <input type="text" placeholder="City" name = "Destination City">
+                </div>
+                <div>
+                  <input type="text" placeholder="State (e.g. NY)" name = "Destination State">
+                </div>
+                <div>
+                  <input type="number" placeholder="Zipcode" name = "Destination Zipcode">
+                </div>
+
+                {% for e in errors %}
+                    <p>{{ e }}</p>
+                {% endfor %}
+
+                <div class="mt-2">
+                  <button type="submit">
+                    Calculate routes
+                  </button>
+                </div>
+              </div>
+
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+
+    </center>
+
+
+    </div>
+  </section>
+  <!-- end contact section -->
+
+  {% endblock content %}

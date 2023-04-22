@@ -31,18 +31,18 @@
   <!-- responsive style -->
   <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
 
-  <link rel="icon" href="{% static 'images/MaeLogo.ico' %}"/>
+  <link rel="icon" href="{% static 'images/SustainableMaps.ico' %}"/>
 </head>
 
 <body>
-  <div class="hero_area">
+  <div>
     <!-- header section strats -->
     <header class="header_section">
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
           <a class="navbar-brand" href="/">
-            <img src="{% static 'images/MaeLogo.png' %}" alt="" /><span>
-              Mae
+            <img src="{% static 'images/SustainableMaps.png' %}" alt="" /><span>
+              Sustainable Maps
             </span>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -57,7 +57,7 @@
                     <!-- <span class="sr-only">(current)</span> -->
                   <a class="nav-link" href="/">Home</a>
                 </li>
-                <li class="nav-item">
+                {% comment %} <li class="nav-item">
                   <a class="nav-link" href="/about">About</a>
                 </li>
                 <li class="nav-item">
@@ -72,7 +72,7 @@
               </ul>
               <form class="form-inline my-2 my-lg-0 ml-0 ml-lg-4 mb-3 mb-lg-0">
                 <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit"></button>
-              </form>
+              </form> {% endcomment %}
             </div>
             <div class="quote_btn-container ml-0 ml-lg-4 d-flex justify-content-center">
               {% if request.user.is_authenticated %}
@@ -80,8 +80,8 @@
                   Logout
                 </a>
               {% else %}
-                <a href="/login">
-                  &nbsp Login &nbsp
+                <a href="/app">
+                  &nbsp Try it &nbsp
                 </a>
               {% endif %}
             </div>
@@ -97,148 +97,11 @@
   <section class="info_section layout_padding">
     <div class="container">
       <div class="row">
-        <div class="col-md-3">
-          <h5>
-            Fruits
-          </h5>
-          <ul>
-            <li>
-              randomised
-            </li>
-            <li>
-              words which
-            </li>
-            <li>
-              don't look even
-            </li>
-            <li>
-              slightly
-            </li>
-            <li>
-              believable. If you
-            </li>
-            <li>
-              are going to use
-            </li>
-            <li>
-              a passage of
-            </li>
-            <li>
-              Lorem Ipsum,
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-3">
-          <h5>
-            Services
-          </h5>
-          <ul>
-            <li>
-              randomised
-            </li>
-            <li>
-              words which
-            </li>
-            <li>
-              don't look even
-            </li>
-            <li>
-              slightly
-            </li>
-            <li>
-              believable. If you
-            </li>
-            <li>
-              are going to use
-            </li>
-            <li>
-              a passage of
-            </li>
-            <li>
-              Lorem Ipsum,
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-3">
-          <h5>
-            List
-          </h5>
-          <ul>
-            <li>
-              randomised
-            </li>
-            <li>
-              words which
-            </li>
-            <li>
-              don't look even
-            </li>
-            <li>
-              slightly
-            </li>
-            <li>
-              believable. If you
-            </li>
-            <li>
-              are going to use
-            </li>
-            <li>
-              a passage of
-            </li>
-            <li>
-              Lorem Ipsum,
-            </li>
-          </ul>
-        </div>
-        <div class="col-md-3">
-          <div class="social_container">
-            <h5>
-              Follow Us
-            </h5>
-            <div class="social-box">
-              <a href="">
-                <img src="{% static 'images/fb.png' %}" alt="">
-              </a>
-
-              <a href="">
-                <img src="{% static 'images/twitter.png' %}" alt="">
-              </a>
-              <a href="">
-                <img src="{% static 'images/linkedin.png' %}" alt="">
-              </a>
-              <a href="">
-                <img src="{% static 'images/instagram.png' %}" alt="">
-              </a>
-            </div>
-          </div>
-          <div class="subscribe_container">
-            <h5>
-              Subscribe Now
-            </h5>
-            <div class="form_container">
-              <form action="">
-                <input type="email">
-                <button type="submit">
-                  Subscribe
-                </button>
-              </form>
-            </div>
-          </div>
         </div>
       </div>
     </div>
   </section>
 
-
-
-  <!-- footer section -->
-  <section class="container-fluid footer_section">
-    <p>
-      Copyright &copy;
-      <a href="https://html.design/">Mae</a>
-    </p>
-  </section>
-  <!-- footer section -->
 
   <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
   <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>

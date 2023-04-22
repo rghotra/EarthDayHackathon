@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Directions{% endblock title %}
+
+{% block content %}
+
+  <!-- fruits section -->
+
+  <section class="fruit_section layout_padding-top">
+    <div class="container">
+        <h2 class="custom_heading">Directions</h2>
+        <p class="custom_heading-text">
+        Directions from your starting location to the destination.
+        </p>
+        
+        {% autoescape off %}
+            {% for key,value in paths.items %}
+
+                <h4 class="mt-5" style="color:blue">{{ key }}</h4>
+                <p> <b> Total CO2 emissions from this path:<b> <i style="color:orange">{{ value.co2 }} kg CO<sub>2</sub></i>. On average, it would take roughly <span style="color:red">{{ value.tree }}</span> trees to metabolize that much CO<sub>2</sub> in a day.</p>
+                <ol>
+                    {% for step in value.directions %}
+                        <li> <p>{{ step }}</p> </li>
+                    {% endfor %}
+                </ol>
+                
+            {% endfor %}
+        {% endautoescape %}
+
+    </div>
+  </section>
+
+  <!-- end fruits section -->
+
+  {% endblock content %}

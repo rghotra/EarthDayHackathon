@@ -1,4 +1,6 @@
 venv/
 **/__pycache__/
-Mae/db.sqlite3
-Mae/static_root
+Climate/db.sqlite3
+Climate/static_root
+Climate/gpt_key.txt
+Climate/maps_key.txt
